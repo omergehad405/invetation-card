@@ -19,10 +19,8 @@ function downloadImage() {
   }
 
   // Set canvas dimensions based on the image size
-  const scaleFactor = window.devicePixelRatio || 1;
-  canvas.width = backgroundImage.width * scaleFactor;
-  canvas.height = backgroundImage.height * scaleFactor;
-  ctx.scale(scaleFactor, scaleFactor);
+  canvas.width = backgroundImage.width;
+  canvas.height = backgroundImage.height;
 
   // Draw the image on the canvas
   ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
