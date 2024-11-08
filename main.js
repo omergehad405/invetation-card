@@ -1,4 +1,3 @@
-// دالة لتحديث الاسم أثناء الكتابة
 function updateName() {
   const userName = document.getElementById("userNameInput").value;
   document.getElementById("userNameDisplay").innerText = userName;
@@ -28,12 +27,15 @@ function downloadImage() {
     // رسم الصورة على الـ canvas
     ctx.drawImage(backgroundImage, 0, 0);
 
-    // إضافة النص
-    ctx.font = '24px "Noto Nastaliq Urdu", serif';
+    // تحديد حجم الخط ديناميكيًا بناءً على عرض الصورة
+    const fontSize = Math.min(canvas.width, canvas.height) / 20; // يمكنك تعديل النسبة حسب الحجم المطلوب
+
+    // إضافة النص بحجم ديناميكي
+    ctx.font = `${fontSize}px "Noto Nastaliq Urdu", serif`;
     ctx.fillStyle = "#1f6851";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText(name, canvas.width / 2, canvas.height * 0.325); // تحديد موقع النص
+    ctx.fillText(name, canvas.width / 2.2, canvas.height * 0.325); // تحديد موقع النص
 
     // تصدير الصورة كـ Blob
     canvas.toBlob(function (blob) {
