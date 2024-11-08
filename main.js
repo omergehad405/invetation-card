@@ -30,7 +30,7 @@ function downloadImage() {
   ctx.fillStyle = "#1f6851"; // Same color
   ctx.textAlign = "center"; // Align the text in the center
   ctx.textBaseline = "middle"; // Align vertically in the center
-  ctx.fillText(name, canvas.width / 3, canvas.height * 0.325); // Position the text at 26.5% height
+  ctx.fillText(name, canvas.width / 2.2, canvas.height * 0.325); // Position the text at 26.5% height
 
   // Create a link to download the image
   const link = document.createElement("a");
