@@ -35,7 +35,7 @@ function downloadImage() {
     ctx.fillStyle = "#1f6851";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText(name, canvas.width / 3, canvas.height * 0.325); // تحديد موقع النص
+    ctx.fillText(name, canvas.width / 2.8, canvas.height * 0.325); // تحديد موقع النص
 
     // تصدير الصورة كـ Blob
     canvas.toBlob(function (blob) {
